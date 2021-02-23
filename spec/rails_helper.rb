@@ -32,6 +32,7 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
+  config.include ApiHelpers, type: :request
 
   # You must have the chrome browser installed
   Capybara.javascript_driver = :selenium_chrome
